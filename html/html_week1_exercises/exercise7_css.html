@@ -1,0 +1,66 @@
+<!-- 🎯 Practice Exercise 2
+
+**Task:** Create a styled "About Me" card using CSS selectors and typography properties.
+
+**Requirements:**
+- Use different heading levels with custom fonts
+- Apply colors using different CSS color methods
+- Use classes for reusable styles
+- Include proper spacing with padding and margin
+- Make it visually appealing with borders and backgrounds -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 20px;
+    }
+    .card {
+        background-color: white;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        padding: 20px;
+        max-width: 400px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);;
+        
+    }
+    h1 {
+        font-family: 'Georgia', serif;
+        color: rgb(34, 34, 34);
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+    h2 {
+        font-family: 'Verdana', sans-serif;
+        color: hsl(210, 50%, 40%);
+        text-align: center;
+        margin-top: auto;
+    }
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #555;
+        text-align: justify;
+    }
+    .highlight {
+        color: #e91e63; /* Hex color */
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+    <div class="card">
+        <h1>About Me</h1>
+        <h2 class="highlight">Simeon</h2>
+        <p>Hello! I'm Simeon, an AI developer with a passion for creating beautiful and functional websites. I love learning new technologies and improving my skills.</p>
+        <p>In my free time, I enjoy playing chess, and exploring new places.</p>
+    </div>
+</body>
+</html>
