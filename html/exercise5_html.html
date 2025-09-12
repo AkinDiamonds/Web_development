@@ -1,0 +1,126 @@
+<!-- ## 🎯 Practice Exercise 5
+**Task:** Create a multimedia portfolio page with:
+- A table showing your projects
+- Images with captions
+- Navigation links
+- An embedded video
+- Audio element (optional) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+    <title>Multimedia Portfolio</title>
+</head>
+
+<style>
+    body{
+        padding: 20px; background-color: rgb(44, 151, 151);
+        align-items: center;
+    }
+
+    .multimedia{
+        display: flex; flex-direction: column;
+        align-items: center; 
+    }
+    .multimedia h2{
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .multimedia figcaption{
+        text-align: center;
+        font-style: italic;
+        margin-bottom: 2rem;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 8px;
+    }
+
+    .headboy{padding: 2rem;
+        background-color:rgb(24, 107, 107);
+        position: sticky; top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    .headboy header{
+        font-family: 'Italianno', cursive;
+        font-size: 2.5rem;
+        color: rgb(244, 250, 246);
+    }
+</style>
+<body>
+    
+    
+    <div class="headboy">
+        <header>My Multimedia Portfolio</header>
+        <nav>
+            <a href="#projects">Projects</a> |
+            <a href="#images">Images</a> |
+            <a href="#video">Video</a> |
+            <a href="#audio">Audio</a>
+            </nav>
+    </div>
+    
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <table>
+            <tr>
+                <th>Project Name</th>
+                <th>Description</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>Project 1</td>
+                <td>A Photoshoot project.</td>
+                <td><a href="https://google.com">View Project</a></td>
+            </tr>
+            <tr>
+                <td>Project 2</td>
+                <td>A video editing project.</td>
+                <td><a href="https://google.com">View Project</a></td>
+            </tr>
+        </table>
+    </section>
+
+    <div class="multimedia">
+        <section id="images">
+            <h2>Images with Captions</h2>
+            <figure>
+                <img src="/Assets/leng-chan-o40LxDzN3rM-unsplash.jpg" alt="portfolio image 1" width="560" height="400">
+                <figcaption>Photoshoot session</figcaption>
+            </figure>
+            <figure>
+                <img src="/Assets/keagan-henman-pPxJTtxfV1A-unsplash.jpg" alt="portfolio image 2" width="560" height="400">
+                <figcaption>Dark Studio</figcaption>
+            </figure>
+        </section>
+
+        <section id="video">
+            <h2>Embedded Video</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8TeAp0pjVLg?si=PonlQ6_e2AJ2vgd1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+    </div>
+
+    <section id="audio">
+        <h2>Audio Element (Optional)</h2>
+        <audio controls>
+            <source src="/Assets/Dagored - The Dead Man's March (freetouse.com).mp3" type="audio/mpeg">
+        </audio>
+    </section>
+
+
+</body>
+</html>

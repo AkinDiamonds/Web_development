@@ -1,0 +1,190 @@
+<!-- ## 🎯 Practice Exercise 6
+**Create a professional contact page that includes:**
+
+**Requirements:**
+- Contact form with all input types we learned
+- Company information table
+- Image gallery
+- Social media links
+- Contact details (email, phone)
+- Professional styling with inline CSS -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<style>
+    .social-media {
+        list-style-type: none;
+        padding: 0;
+    }
+    .social-media li {
+        display: inline;
+        margin-right: 10px;
+    }
+    .social-media a {
+        text-decoration: none;
+        color: #0a3336;
+    }
+    .gallery {
+        background-image: url(/Assets/cars/neon.jpg);
+        backface-visibility: visible;
+        padding: 0;
+        height: 10%;
+        overflow: hidden;
+    }
+
+    .animate-on-hover {
+        border: #000708;
+        padding: 0;
+        width: 50%;
+        height: 10%;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .animate-on-hover:hover {
+    transform: scale(1.1) rotate(2deg);
+    color: rgba(13, 4, 37, 0.8);
+    }
+    .scroller-inner {
+        display: inline-flex;
+        animation: scroll-left 30s linear infinite;
+        animation-play-state: running; 
+    }
+
+    .scroller-inner img {
+        max-width: 50%;
+        height: auto;
+        border-radius: 8px;
+        margin-right: 10px; 
+        flex-shrink: 0; 
+    }
+
+    /* =============Animation sequence============== */
+    @keyframes scroll-left {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-500%);
+            transform: translateX(-500%);
+        }
+    }
+
+    /*=======Pause the scrolling when a user hovers over the gallery============== */
+    .gallery:hover .scroller-inner {
+        animation-play-state: paused;
+    }
+</style>
+</head>
+<body style="font-family: 'Open Sans', sans-serif;
+            margin: 20px;
+            background-color: #faf9fc;
+            color: #0d0425;">
+    <h1 style="color: #2d0f80;">Contact Us</h1>
+    <form style= "background: #a995df;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px; ">
+        <label for="name" style="display: block;
+            margin-top: 10px;">Name:</label>
+        <input type="text" id="name" name="name" style="width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;" required>
+
+        <label for="email" style="display: block;
+            margin-top: 10px;">Email:</label>
+        <input type="email" id="email" name="email" style="width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;" required>
+
+        <label for="message" style="display: block;
+            margin-top: 10px;">Message:</label>
+        <textarea id="message" name="message" style="width: 100%;
+            padding: 20px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;" placeholder="Enter your message here..." required></textarea>
+
+        <button type="submit" style="margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #26077e;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;">Send</button>
+    </form>
+
+    <h2 style="color: #26077e">Company Information</h2>
+    <table style="width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;">
+        <tr>
+            <th style="border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;">Name</th>
+            <th style="border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;">Address</th>
+            <th style="border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;">Phone</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;">Diamonds Auto</td>
+            <td style="border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;">122 Allen Avenue, Ikeja</td>
+            <td style="border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;">+2349065975645</td>
+        </tr>
+    </table>
+
+    <h2 style="color: #26077e;">Image Gallery</h2>
+    <div class="gallery" style="padding: 1%; align-self: center; max-width:max-content; ">
+        <div class="scroller-inner">
+            <img class="animate-on-hover" style="width: 50%; border-radius: 8px" src="/Assets/cars/ben-griffiths-KfJB7UVFte8-unsplash.jpg" alt="Image 1">
+            <img class="animate-on-hover" style="width: 50%; border-radius: 8px" src="/Assets/cars/christian-paul-stobbe-GqYcqxczMRs-unsplash.jpg" alt="Image 2">
+            <img class="animate-on-hover" style="width: 50%; border-radius: 8px" src="/Assets/cars/christian-paul-stobbe-tCmfRyXD6eU-unsplash.jpg" alt="Image 3">
+            <img class="animate-on-hover" style="width: 50%; border-radius: 8px" src="/Assets/cars/cook-aynne-HNeoRCibckM-unsplash.jpg" alt="Image 4">
+            <img class="animate-on-hover" style="width: 50%; border-radius: 8px" src="/Assets/cars/cook-aynne-vsn5LaXYCwk-unsplash.jpg" alt="Image 5">
+         
+            <img class="animate-on-hover" style="width: 50%; border-radius: 8px" src="/Assets/cars/ben-griffiths-KfJB7UVFte8-unsplash.jpg" alt="Image 1">
+            <img class="animate-on-hover" style="width: 50%; border-radius: 8px" src="/Assets/cars/christian-paul-stobbe-GqYcqxczMRs-unsplash.jpg" alt="Image 2">
+            <img class="animate-on-hover" style="width: 50%; border-radius: 8px" src="/Assets/cars/christian-paul-stobbe-tCmfRyXD6eU-unsplash.jpg" alt="Image 3">
+            <img class="animate-on-hover" style="width: 50%; border-radius: 8px" src="/Assets/cars/cook-aynne-HNeoRCibckM-unsplash.jpg" alt="Image 4">
+            <img class="animate-on-hover" style="width: 50%; border-radius: 8px" src="/Assets/cars/cook-aynne-vsn5LaXYCwk-unsplash.jpg" alt="Image 5">
+
+            <img class="animate-on-hover" style="width: 50%; border-radius: 8px" src="/Assets/cars/ben-griffiths-KfJB7UVFte8-unsplash.jpg" alt="Image 1">
+            <img class="animate-on-hover" style="width: 50%; border-radius: 8px" src="/Assets/cars/christian-paul-stobbe-GqYcqxczMRs-unsplash.jpg" alt="Image 2">
+            <img class="animate-on-hover" style="width: 50%; border-radius: 8px" src="/Assets/cars/christian-paul-stobbe-tCmfRyXD6eU-unsplash.jpg" alt="Image 3">
+            <img class="animate-on-hover" style="width: 50%; border-radius: 8px" src="/Assets/cars/cook-aynne-HNeoRCibckM-unsplash.jpg" alt="Image 4">
+            <img class="animate-on-hover" style="width: 50%; border-radius: 8px" src="/Assets/cars/cook-aynne-vsn5LaXYCwk-unsplash.jpg" alt="Image 5">
+        </div>
+        </div>
+    </div>
+
+    <h2 style="color: #26077e;">Follow Us</h2>
+    <ul class="social-media">
+        <li><a href="https://facebook.com">Facebook</a></li>
+        <li><a href="https://twitter.com">Twitter</a></li>
+        <li><a href="https://instagram.com">Instagram</a></li>
+    </ul>
+
+    <h2 style="color: #26077e;">Contact Details</h2>
+    <p>Email: info@example.com</p>
+    <p>Phone: (123) 456-7890</p>
+</body>
+</html>

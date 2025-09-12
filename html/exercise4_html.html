@@ -1,0 +1,89 @@
+<!-- **Task:** Create a registration form with:
+- First and last name fields
+- Email and password
+- Age (number input)
+- Gender (radio buttons)
+- Interests (checkboxes)
+- Country dropdown
+- Submit button
+
+**Build it in the cell below:** -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <form>
+        <div style="padding: 15px; color: #000000; background-color: rgb(226, 247, 231); width: auto; text-align: left;">
+            <div style="display: flex; flex-direction: column; margin-bottom: 25px;">
+                <label for="first_name_input" style="margin-bottom: 5px;" >First Name:</label>
+                <label for="first_name_input"></label>
+                <input type="text" id="first_name_input" name="first_name" style="margin-top: 5px; width: 50%;" placeholder="First Name" required>
+            </div>
+
+            <div style="display: flex; flex-direction: column; margin-bottom: 25px;">
+                <label for="last_name_input" style="margin-bottom: 5px;">Last Name:</label>
+                <input type="text" id="last_name_input" name="last_name" style="margin-top: 5px; width: 50%;" placeholder="Last Name" required>
+            </div>
+
+            <div style="display: flex; flex-direction: column; margin-bottom: 25px;">
+                <label for="email_input" style="margin-bottom: 5px;">Email:</label>
+                <input type="email" id="email_input" name="email" style="margin-top: 5px; width: 50%;" placeholder="Email" required>
+            </div>
+            <div style="display: flex; flex-direction: column; margin-bottom: 25px;">
+                <label for="password_input" style="margin-bottom: 5px;">Password:</label>
+                <input type="password" id="password_input" name="password" style="margin-top: 5px; width: 50%;" placeholder="Password" required>
+            </div>
+
+            <div style="display: flex; flex-direction: column; margin-bottom: 25px;">
+                <label for="age_input" style="margin-bottom: 5px;">Age:</label>
+                <input type="number" id="age_input" name="age" style="margin-top: 5px; width: 50%;" placeholder="Age" required>
+            </div>
+
+            <div style="display: flex; flex-direction: column; margin-bottom: 25px;">
+                <label for="gender_input" style="margin-bottom: 5px;">Gender:</label>
+                <div style="display: flex; flex-direction: row;">
+                    <label style="margin-right: 10px;">
+                        <input type="radio" id="gender_male" name="gender" value="male" required> Male
+                    </label>
+                    <label>
+                        <input type="radio" id="gender_female" name="gender" value="female" required> Female
+                    </label>
+                </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; margin-bottom: 25px;">
+                <label for="interests_input" style="margin-bottom: 5px;">Interests:</label>
+                <div style="display: flex; flex-direction: column;">
+                    <label>
+                        <input type="checkbox" id="interest_sports" name="interests" value="sports"> Sports
+                    </label>
+                    <label>
+                        <input type="checkbox" id="interest_music" name="interests" value="music"> Music
+                    </label>
+                    <label>
+                        <input type="checkbox" id="interest_travel" name="interests" value="travel"> Travel
+                    </label>
+                </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; margin-bottom: 25px;">
+                <label for="country_input" style="margin-bottom: 5px;">Country:</label>
+                <select id="country_input" name="country" style="margin-top: 5px; width: 50%;" required>
+                    <option value="">Select your country</option>
+                    <option value="usa">United States</option>
+                    <option value="canada">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                </select>
+            </div>
+
+            <div style="display: flex; flex-direction: column; margin-bottom: 25px;">
+                <button type="submit" style="width: 50%; cursor: pointer; padding: 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px;">Register</button>
+            </div>
+        </form>
+    </body>
+</html>
