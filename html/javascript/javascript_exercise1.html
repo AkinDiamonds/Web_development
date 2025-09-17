@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        *,
+        *::before,
+        *::after{
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(227, 226, 238);
+        }
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .fullpage{
+            width: 100vw;
+            height: 100vh;
+        }
+        .btn_container{
+            width: 100%;
+            height: 7%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-right: 100px;
+            background-color: rgb(12, 12, 68);
+            padding: 15px;
+        }
+        button{
+            height: 70%;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+
+        }
+        button:hover{
+            background-color: blue;
+        }
+        .details{
+            position: absolute;
+        }
+
+        #contact{
+            display: none;
+        }
+
+        #skills{
+            display: none;
+        }
+        .display{
+            height: 93%;
+            border: 5px rgb(238, 237, 247);
+            border-style: groove;
+            border-radius: 5px;
+            padding: 20px;
+            background-color: rgb(201, 200, 211);
+            margin: 5px;
+        }
+    </style>
+
+    <script src="javascript_exercise.js" defer></script>
+</head>
+<body>
+    <div class="fullpage">
+        <div class="btn_container">
+            <button id="aboutmebtn">About Me</button>
+            <button id="contactbtn">Contact</button>
+            <button id="skillsbtn">Skills</button>
+        </div>
+        <div class="display">
+            <p class="details" id="aboutme">My name is Simeon.</p>
+            <p class="details" id="contact">+2349065979423</p>
+            <p class="details" id="skills">Python, web dev, ai dev.</p>
+        </div>
+    </div>
+</body>
+</html>
