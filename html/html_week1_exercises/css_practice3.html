@@ -1,0 +1,111 @@
+<!-- ## 🎯 Practice Exercise 3
+
+**Task:** Create a "Dashboard Layout" using Flexbox
+
+**Requirements:**
+- Top navigation bar with logo and menu items
+- Main content area with sidebar and content section
+- Cards section with equal-height feature cards
+- Use Flexbox for all layouts
+- Include proper spacing and visual hierarchy
+- Add hover effects for interactive elements
+
+**Bonus Challenges:**
+- Create a footer with multiple columns using Flexbox
+- Add a hero section with perfectly centered content
+- Use different flex-grow values to create interesting proportions -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    *,
+    *::before,
+    *::after{
+        box-sizing: border-box
+    }
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .fullpage{
+        font-family: Arial, Helvetica, sans-serif;
+        height: 100vh;
+        width: 100vw;
+        background-color: #f2f2f1;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .nav-menu{
+        display: flex;
+        gap: 15px;
+        margin-right: 15px;
+    }
+    header{
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid black;
+        padding: 0 20px;
+        background-color: #264653;
+        color: white;
+    }
+    .cards{
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px black;
+    }
+    .cards :hover{
+        transform: scale(1.05);
+        animation:normal 0.5s forwards;
+        cursor: pointer;
+        box-shadow: 2px 2px 5px black;
+
+    }
+</style>
+<body>
+    <div class="fullpage">
+        <header>
+            <h1>Header</h1>
+            <nav class="nav-menu">
+                <div>Home</div>
+                <div>About</div>
+                <div>Services</div>
+                <div>Contact</div>
+            </nav>
+        </header>
+        <div class="main-content" style="display: flex; height: 60%; gap: 10px;">
+            <aside style="flex: 0.4; width: 30%; border: 1px solid black; background-color: #f4a261; display: flex; justify-content: center; align-items: center;">
+                Sidebar
+            </aside>
+            <section style="flex: 3; border: 1px solid black; background-color: #2a9d8f; display: flex; justify-content: center; align-items: center; flex-grow: 3;">
+                Main Content
+            </section>
+        </div>
+        <div class="cards" style="display: flex; gap: 10px; height: 20%;">
+            <div style="flex: 1; border: 1px solid black; background-color: #e76f51; display: flex; justify-content: center; align-items: center; border-radius: 5px;">
+                Card 1
+            </div>
+            <div style="flex: 1; border: 1px solid black; background-color: #e9c46a; display: flex; justify-content: center; align-items: center; border-radius: 5px;">
+                Card 2
+            </div>
+            <div style="flex: 1; border: 1px solid black; background-color: #264653; color: white; display: flex; justify-content: center; align-items: center; border-radius: 5px;">
+                Card 3
+            </div>
+        </div>
+        <footer style="height: 20%; border-top: 2px solid black; display: flex; justify-content: space-around; align-items: center; background-color: #6a994e;">
+            <div>Footer Column 1</div>
+            <div>Footer Column 2</div>
+            <div>Footer Column 3</div>
+        </footer>
+    </div>
+</body>
+</html>

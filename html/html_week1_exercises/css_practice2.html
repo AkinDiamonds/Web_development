@@ -1,0 +1,116 @@
+<!-- ## 🎯 Practice Exercise 2
+
+**Task:** Create a "Holy Grail" layout using Flexbox
+
+**Requirements:**
+- Header at the top (full width)
+- Footer at the bottom (full width)  
+- Three-column middle section: sidebar, main content, sidebar
+- Main content should grow to fill available space
+- Should work on different screen sizes
+- Use proper colors and spacing for visual appeal
+
+**Bonus:**
+- Make it responsive (sidebars stack on smaller screens) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy Grail</title>
+</head>
+
+<style>
+    *,
+    *::before,
+    *::after{
+        box-sizing: border-box
+    }
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .fullpage{
+        font-family: Arial, Helvetica, sans-serif;
+        height: 100vh;
+        width: 100vw;
+        background-color: #f2f2f1;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    header{
+        width: 100%;
+        height: 20%;
+        display: flex;
+        justify-content: center;
+        border: 1px solid black;
+        background-color: #8fd04e;
+    }
+    footer{
+        width: 100%;
+        height: 20%;
+        display: flex;
+        justify-content: center;
+        border: 1px solid black;
+        background-color: #cee741;
+    }
+
+    .middlesection{
+        display: flex;
+        width: 100%;
+        height: 60%;
+        justify-content: center;
+        gap: 10px;
+    }
+    .maincontent{
+        border: 1px solid black;
+        display: flex;
+        width: 60%;
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+        background-color: #808080;
+    }
+    .sidebar{
+        border: 1px solid black;
+        display: flex;
+        width: 20%;
+        justify-content: center;
+        align-items: center;
+        background-color: #fbf7ee;
+    }
+    .hf{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+</style>
+
+<body>
+    <div class="fullpage">
+        <header>
+            <h3 class="hf">Header</h3>
+        </header>
+
+        <div class="middlesection">
+            <div class="sidebar">
+                <h3>Sidebar</h3>
+            </div>
+            <div class="maincontent">
+                <h3 id="maincontent
+                ">Main content</h3>
+            </div>
+            <div class="sidebar">
+                <h3>Sidebar</h3>
+            </div>
+        </div>
+        <footer>
+            <h3 class="hf">Footer</h3>
+        </footer>
+    </div>
+</body>
+</html>
