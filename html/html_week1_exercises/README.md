@@ -28,15 +28,15 @@
 ![Image](https://github.com/user-attachments/assets/e3357006-d119-40b3-ab90-a7c5f5ef1c94)
 
 ### Task5
-![Image](https://github.com/user-attachments/assets/8e9e392c-2350-442a-9b58-9890053cfc6c)
+https://github.com/user-attachments/assets/65900591-5b89-42ff-84dc-cbb35447672b
 
 ### Task6
 ![Image](https://github.com/user-attachments/assets/156a7ed9-93e3-4af8-b53c-ca570257a4aa)
 
 
 ### Task7
-![Image](https://github.com/user-attachments/assets/69e5845c-c1db-479d-bd7e-8afc45568fe6)
+https://github.com/user-attachments/assets/d33daf4f-aa01-49e9-8176-705385456cf6
+
 
 ### Task8
-![Image](https://github.com/user-attachments/assets/09910b81-5faf-4b43-8c5f-30f4aae5805c)
-
+https://github.com/user-attachments/assets/07692086-0f06-493a-820b-99dfa1ec1e80
