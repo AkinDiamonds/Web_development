@@ -40,3 +40,15 @@
 ### Task8
 ![Image](https://github.com/user-attachments/assets/09910b81-5faf-4b43-8c5f-30f4aae5805c)
 
+
+
+https://github.com/user-attachments/assets/65900591-5b89-42ff-84dc-cbb35447672b
+
+
+
+https://github.com/user-attachments/assets/d33daf4f-aa01-49e9-8176-705385456cf6
+
+
+
+https://github.com/user-attachments/assets/07692086-0f06-493a-820b-99dfa1ec1e80
+
