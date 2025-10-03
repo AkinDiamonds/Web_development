@@ -1,0 +1,38 @@
+<!-- practice 1 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="text">This is my text.</p>
+    <button id="changeColorBtn">Change Color</button>
+    <textarea id="textInput" onkeyup="updateCount()" placeholder="Type any text here........."></textarea>
+
+    <div>
+        <span id="charCount">0</span> Characters | <span id="wordCount">0</span> Words
+    </div>
+
+    <form id="loginForm" onsubmit="login(event)">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+        </div>
+        <br>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+        </div>
+        <br>
+        
+        <button type="submit">Login</button>
+    </form>
+
+    <p id="message"></p>
+
+
+    <script src="js_practice5.js"></script>
+</body>
+</html>
