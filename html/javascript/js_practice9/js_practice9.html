@@ -7,17 +7,66 @@
 </head>
 <body>
     <script>
-        function tellJoke() {
-            return new Promise((resolve)=> {
-                setTimeout(()=>{
-                    resolve("😂 Here's a funny joke!")
-                }, 3000);
-            });
-        }
-        tellJoke()
-            .then(function(joke) {
+        // practice 1
+        // function tellJoke() {
+        //     return new Promise((resolve)=> {
+        //         setTimeout(()=>{
+        //             resolve("Here's a funny joke!")
+        //         }, 3000);
+        //     });
+        // }
+        // tellJoke()
+        //     .then(joke => {
+        //         console.log(joke)
+        //     })
+
+        // practice 2
+        // function deliveryOrder(order) {
+        //     return new Promise((resolve, reject) => {
+        //         let isDelivered = Math.random() > 0.5;
+        //         setTimeout(() => {
+        //             if (isDelivered) {
+        //                 resolve(`Delivered: ${order, isDelivered}`)
+        //             } else {
+        //                 reject(`Delivery failed: ${order}`)
+        //             }
+        //         }, 2000)
                 
-            })
+        //     })
+        // }
+
+        // deliveryOrder("Yam")
+        //     .then((order) => {
+        //         console.log(order)
+        //     })
+        //     .catch(error => {
+        //         console.log(error)
+        //     })
+
+        // practice 3
+        function orderGuy(array) {
+            return new Promise(resolve => {
+                setTimeout(()=>{
+                    resolve(`${array} ready`)
+                }, 2000);
+            });
+        };
+
+        async function prepareOrder() {
+            let orders = ["Coffee", "Cake", "Juice"];
+            try {
+                for (order of orders) {
+                    let logs = await orderGuy(order)
+                    console.log(logs)
+                }
+            }
+
+            catch(error) {
+                console.log(error)
+            }
+        }
+
+        prepareOrder()
     </script>
 </body>
 </html>
