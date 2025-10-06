@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h6>Asynchronous Javascript</h6>
+    <p class="display"></p>
+    <button onclick="orderCoffee()">Order Coffee</button>
+    <script>
+        // // SYNCHRONOUS (blocking) - Everything waits
+        // console.log("Step 1: Start cooking");
+
+        // // Simulate waiting 5 minutes (blocking loop)
+        // for (let i = 0; i < 1e10; i++) { }
+
+        // console.log("Step 2: Food ready");
+        // console.log("Step 3: Serve customer");
+
+        // console.log("Step 1: Start cooking");
+
+        // setTimeout(()=>{
+        //     console.log(`Step 3: Food ready after 6 seconds`);
+        // }, 5000);
+
+        // console.log("Step 2: Serve other customers while waiting");
+        // console.log("Step 4: Take more orders");   
+        // let myPromise = new Promise(function(resolve, reject) {
+        //     let success = true;
+
+        //     if (success) {
+        //         resolve("Operation successful!");
+        //     } else {
+        //         reject("Operation failed!");
+        //     }
+        // });
+
+        // myPromise
+        //     .then(function(result) {
+        //         console.log(`Success:${result}`);
+        //     })
+        //     .catch(function(error){
+        //         console.log(`Error: ${error}`);
+        //     })
+        // function getMenuItems(){
+        //     return new Promise((resolve, reject) => {
+        //         console.log("Fetching menu items...");
+                
+        //         setTimeout(() =>{
+        //             let menuItems = ["Coffee", "Sandwich", "Cake"];
+        //             resolve(menuItems);
+        //         }, 2000);
+        //     });
+        // }
+
+        // getMenuItems()
+        //     .then((items) => {
+        //         console.log(`Got Items: ${items}`);
+        //     })
+        //     .catch((error) => {
+        //         console.log(`Error: ${error}`);
+        //     });
+
+        // console.log("This runs while waiting...")
+
+        // promise function
+        // function getMenuItems() {
+        //     return new Promise((resolve) => {
+        //         setTimeout(() => {
+        //             resolve(["Coffee", "Sandwich", "Cake"]);
+        //         }, 3000);
+        //     });
+        // }
+
+        // // traditonal promise usage
+        // getMenuItems()
+        //     .then((items) => {
+        //         console.log("Items", items);
+        //     });
+
+        // // Async/await way (cleaner!)
+        // async function displayMenu() {
+        //     console.log("Fetching menu...");
+        //     let items = await getMenuItems(); // Waiting for the promise
+
+        //     console.log("Items:", items)
+        // }
+        // displayMenu()
+
+
+        // function getMenuItems() {
+        //     return new Promise((resolve) => {
+        //         setTimeout(()=> resolve(["coffee", 'Sandwich']), 1000);
+        //     });
+        // };
+
+        // function checkStock(items) {
+        //     return new Promise((resolve) =>{
+        //         setTimeout(() => resolve({items, inStock: true }), 1000);
+        //     });
+        // };
+
+        // function calculatePrice(stockInfo) {
+        //     return new Promise((resolve) => {
+        //         setTimeout(()=> resolve({...stockInfo, total: 12.50}), 1000);
+        //     });
+        // };
+
+        // // using async/await is much cleaner!
+        // async function processOrder() {
+        //     console.log("Starting order...");
+
+        //     let items = await getMenuItems();
+        //     console.log("Got Items:", items);
+
+        //     let stockInfo = await checkStock(items);
+        //     console.log("Checked stock:", stockInfo);
+
+        //     let finalOrder = await calculatePrice(stockInfo);
+        //     console.log("Final order:", finalOrder);
+
+        //     return finalOrder;
+        // }
+
+        // processOrder();
+
+        // function placeOrder(orderDetails) {
+        //     return new Promise((resolve, reject) =>{
+        //         setTimeout(()=> {
+        //             let success = Math.random() > 0.3;
+
+        //             if (success) {
+        //                 resolve({orderId: 12345, status: "confirmed"});
+        //             } else {
+        //                 reject("Payment failed");
+        //             }
+        //         }, 2000);
+        //     });
+        // };
+
+        // async function submitOrder() {
+        //     try {
+        //         console.log("Placing order...");
+        //         let result = await placeOrder({item: "Latte"});
+        //         console.log("Success! Order ID:", result.orderId);
+        //     } catch (error) {
+        //         console.log("Error:", error);
+        //     };
+        // };
+        // submitOrder();
+
+        // making a coffee
+        function makeCoffee() {
+            return new Promise((resolve)=>{
+                setTimeout(()=> {
+                    resolve("✅ Your coffee is ready!")
+                }, 3000);
+            });
+        };
+
+        // place order
+        async function orderCoffee() {
+            let output = document.querySelector(".display");
+            output.innerHTML = "⏳ Making your coffee... please wait.";
+
+            try {
+                let result = await makeCoffee();
+                output.innerHTML = result;
+            } catch (error) {
+                output.innerHTML = "Something went wrong: " + error;
+            };
+        };
+    </script>
+</body>
+
+</html>
