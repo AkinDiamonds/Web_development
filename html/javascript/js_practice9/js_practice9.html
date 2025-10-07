@@ -7,53 +7,16 @@
 </head>
 <body>
     <script>
-        // practice 1
-        // function tellJoke() {
-        //     return new Promise((resolve)=> {
-        //         setTimeout(()=>{
-        //             resolve("Here's a funny joke!")
-        //         }, 3000);
-        //     });
-        // }
-        // tellJoke()
-        //     .then(joke => {
-        //         console.log(joke)
-        //     })
-
-        // practice 2
-        // function deliveryOrder(order) {
-        //     return new Promise((resolve, reject) => {
-        //         let isDelivered = Math.random() > 0.5;
-        //         setTimeout(() => {
-        //             if (isDelivered) {
-        //                 resolve(`Delivered: ${order, isDelivered}`)
-        //             } else {
-        //                 reject(`Delivery failed: ${order}`)
-        //             }
-        //         }, 2000)
-                
-        //     })
-        // }
-
-        // deliveryOrder("Yam")
-        //     .then((order) => {
-        //         console.log(order)
-        //     })
-        //     .catch(error => {
-        //         console.log(error)
-        //     })
-
-        // practice 3
-        function orderGuy(array) {
-            return new Promise(resolve => {
+        function tellJoke() {
+            return new Promise((resolve)=> {
                 setTimeout(()=>{
-                    resolve(`${array} ready`)
-                }, 2000);
+                    resolve("😂 Here's a funny joke!")
+                }, 3000);
             });
         }
         tellJoke()
             .then(function(joke) {
-                
+                 
             })
     </script>
 </body>
