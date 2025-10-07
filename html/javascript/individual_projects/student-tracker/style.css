@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after,
+*{
+    box-sizing: border-box;
+};
+
+*{
+    margin: 0;
+    border: 0;
+}
+
+:root{
+    --primary-color: green;
+    --alt-text-color: white;
+    --font-size-base: 20px;
+}
+
+.css-overall-container {
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    font-size: var(--font-size-base);
+}
+
+.css-header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 10%;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--alt-text-color);
+    margin-bottom: 20px;
+}
+
+.css-table-container{
+    width: 100%;
+
+}
+
+.add-student-form {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 15%;
+    left: 40%;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background-color: var(--primary-color);
+    width: 300px;
+}
+
+.hide {
+    display: none;
+}

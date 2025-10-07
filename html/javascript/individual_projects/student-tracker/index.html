@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="css-overall-container">
+        <div class="css-header" onclick="hideForm()">Student Performance Tracker</div>
+        <input type="text" name="search" id="js-search" class="css-search" onclick="hideForm()">
+        <button id="js-add-student" class="css-add-student" onclick="addStudent()">Add Student</button>
+        <table border ="1"  width ="100%" id="js-table-container" class="css-table-container" onclick="hideForm()">
+            <thead id="js-thead-container" class="css-thead-container">
+                <tr>
+                    <th>Photo</th>
+                    <th>Name</th>
+                    <th>Class</th>
+                    <th>Average <br>Score</th>
+                    <th>Performance <br>Category</th>
+                </tr>
+            </thead>
+            <tbody id="js-table-display" class="css-table-display"></tbody>
+        </table>
+
+        <section class="add-student-form-container">
+            <form class="add-student-form">
+                <p>Add Student</p>
+                <label for="name">Name</label>
+                <input type="text" id="add-form-name">
+                <label for="age">Age</label>
+                <input type="text" name="age" id="add-form-age">
+                <label for="class">Class</label>
+                <input type="text" name="class" id="add-form-class">
+                <label for="image-url">Image URL</label>
+                <input type="text" name="image-url" id="image-url">
+                <label for="maths-score">Mathematics(Score)</label>
+                <input type="text" name="maths-score" id="maths-score">
+                <label for="english-score">English(Score)</label>
+                <input type="text" name="english-score" id="english-score">
+                <label for="science-score">Science(Score)</label>
+                <input type="text" name="science-score" id="science-score">
+                <button id="submit-form" onclick="submitForm()">Submit</button>
+            </form>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
