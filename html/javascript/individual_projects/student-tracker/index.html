@@ -9,9 +9,9 @@
 <body>
     <div class="css-overall-container">
         <div class="css-header" onclick="hideForm()">Student Performance Tracker</div>
-        <input type="text" name="search" id="js-search" class="css-search" onclick="hideForm()">
-        <button id="js-add-student" class="css-add-student" onclick="addStudent()">Add Student</button>
-        <table border ="1"  width ="100%" id="js-table-container" class="css-table-container" onclick="hideForm()">
+        <input type="search" name="search" id="js-search" class="css-search">
+        <button id="js-add-student" class="css-add-student" onclick="displayAddStudent()">Add Student</button>
+        <table border ="1" id="js-table-container" class="css-table-container" onclick="hideForm()">
             <thead id="js-thead-container" class="css-thead-container">
                 <tr>
                     <th>Photo</th>
@@ -41,7 +41,7 @@
                 <input type="text" name="english-score" id="english-score">
                 <label for="science-score">Science(Score)</label>
                 <input type="text" name="science-score" id="science-score">
-                <button id="submit-form" onclick="submitForm()">Submit</button>
+                <button id="submit-form" onclick="add(event)">Submit</button>
             </form>
         </section>
     </div>
