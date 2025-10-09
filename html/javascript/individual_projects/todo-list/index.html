@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="ovr-container">
+        <div class="header">ToDo List</div>
+        <section class="add-task-container">
+            <form class="add-task-form">
+                <label for="task-name">Task Name:</label>
+                <input type="text" name="task-name" id="js-task-name" placeholder="Enter Task Name" required>
+                <label for="priority">Priority:</label>
+                <select name="priority" id="select-priority">
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+                <label for="due-date"></label>
+                <input type="date" name="due-date" id="js-due-date" placeholder="Add Due Date" required>
+                <button class="add-task-btn">Add Task</button>
+            </form>
+        </section>
+
+        <section class="todo-container">
+            <table border="1" class="table container">
+                <thead>
+                    <th>Name</th>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Name</th>
+                </thead>
+            </table>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -86,7 +86,7 @@ function displayAddStudent() {
 function add(e) {
     // e.preventDefault();
     let name = document.querySelector("#add-form-name").value;
-    let age = document.getElementById("add-form-name").value;
+    let age = document.getElementById("add-form-age").value;
     let studentClass = document.getElementById("add-form-class").value;
     let imageUrl = document.getElementById("image-url").value;
     let mathScore = document.getElementById("maths-score").value;
