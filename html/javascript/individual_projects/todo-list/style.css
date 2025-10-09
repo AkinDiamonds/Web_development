@@ -1,0 +1,11 @@
+.completed {
+  text-decoration: line-through;
+}
+
+.hidden {
+  display: none;
+}
+
+.high { color: red; }
+.medium { color: orange; }
+.low { color: green; }
