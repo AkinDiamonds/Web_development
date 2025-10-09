@@ -9,7 +9,7 @@
 <body>
     <div class="css-overall-container">
         <div class="css-header" onclick="hideForm()">Student Performance Tracker</div>
-        <input type="search" name="search" id="js-search" class="css-search">
+        <input type="search" name="search" id="js-search" class="css-search" oninput="display(this.value)">
         <button id="js-add-student" class="css-add-student" onclick="displayAddStudent()">Add Student</button>
         <table border ="1" id="js-table-container" class="css-table-container" onclick="hideForm()">
             <thead id="js-thead-container" class="css-thead-container">

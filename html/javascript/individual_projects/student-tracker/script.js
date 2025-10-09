@@ -46,18 +46,26 @@ function display(filter="") {
             <td>${student.studentClass}</td>
             <td>${student.averageScore}</td>
             <td style="color: ${student.performanceCategory === "Excellent"? "green": student.performanceCategory === "Good"?"yellow": "red"}"> ${student.performanceCategory}</td>
+            <td> <button class="delete" onclick="deleteBtn(${student.id})">Delete</button> </td>
         </tr>`;
 
         studentList.innerHTML += rows
     });
     
 }
-
+  
 // search function
 function search(sch) {
     let students = getFromLocalStorage();
-    students = students.filter(student => student.name.toLowerCase().includes(sch.toLowerCase()));
+    return students.filter(student => student.name.toLowerCase().includes(sch))
+}
+
+// delete function
+function deleteBtn(id) {
+    let students = getFromLocalStorage();
+    students = students.filter(student => student.id !== id)
     setInLocalStorage(students)
+    display()
 }
 
 // this function is to hide the form persistently
@@ -105,6 +113,4 @@ function add(e) {
 
 }
 
-    // let searchInput = document.getElementById("js-search")
-    // searchInput.addEventListener("keyup", display(searchInput.value))
 display()
