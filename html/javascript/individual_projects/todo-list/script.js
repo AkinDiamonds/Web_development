@@ -13,7 +13,7 @@ function save() {
 // function that displays tasks
 function showTasks(filter = "all") {
     list.innerHTML = '';
-    tasks.forEach((task, index) => {
+    tasks.forEach((task,index) => {
         if (filter === "completed" && !task.done) return;
         if (filter === "pending" && task.done) return;
 
