@@ -30,10 +30,10 @@ class BasicAPI(BaseHTTPRequestHandler):
                     "data": deleted_item
                 })
                 break
-            else:
-                self.send_data({
-                    "message": "Item not found"
-                }, status=404)
+        else:
+            self.send_data({
+                "message": "Item not found"
+            }, status=404)
 
 print("Application is running ")
 def run():
