@@ -93,14 +93,6 @@ You can easily customize the counter by modifying:
 - Best practices for React project structure
 - CSS styling techniques for modern web apps
 
-## Author
-
-**Your Name**
-
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Portfolio: [yourwebsite.com](https://yourwebsite.com)
-
 ## Acknowledgments
 
 - React Documentation
