@@ -1,0 +1,11 @@
+.overall-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+  width: 100vw;
+  background-color: #f0f2f5; 
+  min-height: 100vh;
+  position: relative; 
+  z-index: 1;
+}
