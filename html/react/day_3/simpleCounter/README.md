@@ -1,4 +1,4 @@
-# 🎯 React Counter App
+# React Counter App
 
 <div
 
@@ -37,7 +37,7 @@ This project demonstrates:
 - **JavaScript (ES6+)** - Programming language
 - **CSS3** - Styling with gradients and animations
 
-## 📦 Installation
+## Installation
 
 1. **Clone the repository**
    ```bash
@@ -77,32 +77,6 @@ react-counter-app/
 └── README.md
 ```
 
-## Key Code Snippets
-
-**State Management:**
-```javascript
-const [count, setCount] = useState(0);
-```
-
-**Increment Function:**
-```javascript
-const increment = () => setCount(count + 1);
-```
-
-**Decrement with Guard:**
-```javascript
-const decrement = () => {
-  if (count > 0) {
-    setCount(count - 1);
-  }
-};
-```
-
-**Reset Function:**
-```javascript
-const reset = () => setCount(0);
-```
-
 ## Customization
 
 You can easily customize the counter by modifying:
@@ -111,7 +85,7 @@ You can easily customize the counter by modifying:
 - **Increment value**: Change the increment/decrement value in functions
 - **Starting value**: Modify the initial useState value
 
-## 📝 Lessons Learned
+## Lessons Learned
 
 - How to manage state in functional React components
 - Implementing conditional logic in event handlers
