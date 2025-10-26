@@ -1,0 +1,21 @@
+.expense-item {
+  background: #ecf0f1;
+  padding: 10px 15px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.expense-item .amount {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.expense-item button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
