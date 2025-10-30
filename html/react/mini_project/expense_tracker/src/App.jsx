@@ -16,6 +16,13 @@ function App() {
   const deleteExpense = (id) => {
     setExpenses(expenses.filter((e)=> e.id !==id));
   }
+  
+  // editFunction
+  const editExpense = (id, newText) => {
+    setExpenses(expenses.map((expense)=>{
+      expense.id === id? newText : expense
+    }))
+  }
 
   return(
     <div className='app-container'>

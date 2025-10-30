@@ -34,7 +34,7 @@ function App() {
 
   // Delete task
   function deleteTask(id) {
-    setTasks(taskss.filter(task => task.id !== id))
+    setTasks(tasks.filter(task => task.id !== id))
   }
 
   // Edit task
