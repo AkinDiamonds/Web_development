@@ -1,9 +1,43 @@
 .summary {
-  text-align: center;
-  background: #f1c40f;
-  color: #2c3e50;
-  padding: 15px;
-  margin-top: 20px;
-  border-radius: 6px;
-  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.summary h2 {
+  color: #f1f5fa;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  border-left: 4px solid #3d6ef7;
+  padding-left: 10px;
+  letter-spacing: 0.5px;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.summary-card {
+  background-color: #2b2f3b;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 2px rgba(61, 110, 247, 0.15);
+}
+
+
+.summary-card .label {
+  color: #9aa0b5;
+  font-size: 0.85rem;
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.summary-card .value {
+  color: #f1f5fa;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }

@@ -1,12 +1,5 @@
 .expense-list {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.empty {
-  text-align: center;
-  color: gray;
-  margin-top: 30px;
+  background-color: #1e2127;
+  padding: 15px;
+  border-radius: 12px;
 }

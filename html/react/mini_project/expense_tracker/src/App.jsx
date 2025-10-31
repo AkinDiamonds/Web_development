@@ -9,27 +9,51 @@ function App() {
 
   const [expenses, setExpenses] = useState([])
 
+  const [selectedCategory, setSelectedCategory] = useState("All")
+
   const addExpense = (expense) => {
     setExpenses(prev => [...prev, expense])
   }
 
   const deleteExpense = (id) => {
-    setExpenses(expenses.filter((e)=> e.id !==id));
-  }
-  
-  // editFunction
-  const editExpense = (id, newText) => {
-    setExpenses(expenses.map((expense)=>{
-      expense.id === id? newText : expense
-    }))
+    setExpenses(expenses.filter((e) => e.id !== id));
   }
 
-  return(
+  // editFunction
+  const editExpense = (id, newData) => {
+    setExpenses(expenses.map((exp) =>
+      exp.id === id ? { ...exp, ...newData } : exp
+    ))
+  }
+
+  // filter
+  const filteredExpenses =
+    selectedCategory === "All"
+      ? expenses
+      : expenses.filter((e) => e.category === selectedCategory);
+
+
+  return (
     <div className='app-container'>
       <Header></Header>
-      <AddExpenseForm onAddExpense={addExpense}></AddExpenseForm>
-      <ExpenseList expenses={expenses} onDelete={deleteExpense}></ExpenseList>
-      <Summary expenses={expenses}></Summary>
+      <div className='top-controls'>
+        <AddExpenseForm onAddExpense={addExpense}></AddExpenseForm>
+        <div className="filter-container">
+          {["All", "Food", "Health", "Transport", "Entertainment", "Others"].map((category) => (
+    <button
+      key={category}
+      onClick={() => setSelectedCategory(category)}
+      className={`category-btn ${selectedCategory === category ? "active" : ""}`}
+    >
+      {category}
+    </button>
+          ))}
+        </div>
+      </div>
+      
+      <ExpenseList expenses={filteredExpenses} onDelete={deleteExpense} onEdit={editExpense}></ExpenseList>
+
+      <Summary expenses={filteredExpenses} selectedCategory={selectedCategory}></Summary>
     </div>
   )
 

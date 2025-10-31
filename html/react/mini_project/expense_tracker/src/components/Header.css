@@ -1,7 +1,15 @@
-.app-header {
-  background-color: #2c3e50;
-  color: white;
-  padding: 20px;
+header {
   text-align: center;
-  border-radius: 8px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #2b2f38;
+  padding-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.08);
 }
