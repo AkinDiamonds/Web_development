@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from './components/Header'
 import AddExpenseForm from './components/AddExpenseForm'
 import ExpenseList from './components/ExpenseList'
@@ -10,6 +10,26 @@ function App() {
   const [expenses, setExpenses] = useState([])
 
   const [selectedCategory, setSelectedCategory] = useState("All")
+
+  const [showForm, setShowForm] = useState(false)
+
+  const [quote, setQuote] = useState("")
+
+  // function to set fetch quote from api
+  useEffect (()=>{
+    fetchQuote()
+  }, [])
+
+  async function fetchQuote(){
+    try{
+      const response = await fetch("https://api.quotable.io/random")
+    const data = await response.json()
+    setQuote(data.content)
+    }
+    catch(error){
+      console.log("Error fetching quotes", error)
+    }
+  }
 
   const addExpense = (expense) => {
     setExpenses(prev => [...prev, expense])
