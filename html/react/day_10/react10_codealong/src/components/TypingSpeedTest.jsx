@@ -62,5 +62,20 @@ function TypingSpeedTest() {
 
     // Calculate statistics
 
-    const wordsTyped = userInput.trim().split(/\s+/).filter(word => word.length>0)
+    const wordsTyped = userInput.trim().split(/\s+/).filter(word => word.length>0);
+    const accuracy = userInput.length > 0? Math.round((userInput.split('').filter((char, i) => char === sampleText[i]).length / sampleText.length) * 100) : 0;
+    const wpm = timeElapsed > 0 ? Math.round((wordsTyped / timeElapsed) * 60) : 0;
+
+    return (
+        <div className="typing-container">
+            <h1>Typing Speed Test</h1>
+            <p className="subtitle">Test your typing speed with Nigerian context!</p>
+
+            {!started && !finished && (
+                <div  className="start-section">
+                    <div sample></div>
+                </div>
+            )}
+        </div>
+    )
 }
