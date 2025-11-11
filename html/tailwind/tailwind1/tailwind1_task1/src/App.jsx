@@ -33,7 +33,8 @@ function App() {
             <p className="font-bold text-lg">100</p>
             <p className="text-gray-500 text-sm">Followers</p>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-co
+          l items-center">
             <p className="font-bold text-lg">2</p>
             <p className="text-gray-500 text-sm">Posts</p>
           </div>
